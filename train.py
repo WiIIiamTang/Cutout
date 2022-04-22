@@ -19,7 +19,7 @@ from torchvision import datasets, transforms
 from util.misc import CSVLogger
 from util.cutout import Cutout
 
-from model.resnet import ResNet18
+from model.resnet import ResNet18, ResNet34, ResNet50
 from model.wide_resnet import WideResNet
 
 # model_options = ['resnet18', 'wideresnet']
@@ -231,7 +231,7 @@ def test(loader, cnn):
 
 
 def main():
-    model_options = ['resnet18', 'wideresnet']
+    model_options = ['resnet18', 'wideresnet', 'resnet34', 'resnet50']
     dataset_options = ['cifar10', 'cifar100', 'svhn']
 
     parser = argparse.ArgumentParser(description='CNN')
@@ -352,6 +352,10 @@ def main():
 
     if args.model == 'resnet18':
         cnn = ResNet18(num_classes=num_classes)
+    elif args.model == 'resnet34':
+        cnn = ResNet34(num_classes=num_classes)
+    elif args.model == 'resnet50':
+        cnn = ResNet50(num_classes=num_classes)
     elif args.model == 'wideresnet':
         if args.dataset == 'svhn':
             cnn = WideResNet(depth=16, num_classes=num_classes, widen_factor=8,
