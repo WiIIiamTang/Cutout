@@ -2,6 +2,12 @@
 
 This repository contains the code for the paper [Improved Regularization of Convolutional Neural Networks with Cutout](https://arxiv.org/abs/1708.04552). 
 
+## COMP551 P4 Reproduction
+
+To reproduce the results of our own paper, please follow the steps outlined in this README. All experiments involved running the ``train.py`` code, and passing in the appropriate model, dataset, and cutout/data augmentation arguments. We added the ResNet34 and ResNet50 models to the available ones for training.
+
+**Below is the original README from the authors, to be used as a reference on how to run the code:**
+
 ## Introduction
 
 Cutout is a simple regularization method for convolutional neural networks which consists of masking out random sections of input images during training. This technique simulates occluded examples and encourages the model to take more minor features into consideration when making decisions, rather than relying on the presence of a few major features.  
