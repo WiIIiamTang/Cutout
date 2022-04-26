@@ -4,7 +4,9 @@ This repository contains the code for the paper [Improved Regularization of Conv
 
 ## COMP551 P4 Reproduction
 
-To reproduce the results of our own paper, please follow the steps outlined in this README. All experiments involved running the ``train.py`` code. We added the ResNet34 and ResNet50 models to the available ones for training.
+To reproduce the results of our own paper, please follow the steps outlined in this README. All experiments involved running the ``train.py`` code, and passing in the appropriate model, dataset, and cutout/data augmentation arguments. We added the ResNet34 and ResNet50 models to the available ones for training.
+
+**Below is the original README from the authors, to be used as a reference on how to run the code:**
 
 ## Introduction
 
